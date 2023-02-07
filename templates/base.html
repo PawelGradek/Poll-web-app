@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Poll app {% block title %}{% endblock %}</title>
+    <style>
+        body {background-color: rgb(188, 207, 241);}
+        p    {color: rgb(76, 77, 77);}
+        </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <a class="navbar-brand" href="{% url 'index' %}">Poll App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'pollapp:index' %}">Available Polls</a>
+            </li>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="row">
+            <div class=".col-md-6 m-auto">
+                {% block content %}
+                {% endblock%}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

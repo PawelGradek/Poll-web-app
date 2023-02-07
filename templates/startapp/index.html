@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+<br>
+<center>
+<h1>Welcome to the voting website!</h1>
+        <p>You can vote and see the results.</p>
+        <a class="btn btn-primary" href="{% url 'pollapp:index' %}">View Polls</a></center>
+
+{% endblock %}
